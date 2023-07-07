@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	  <link href="css/main.css" rel="stylesheet" type="text/css">
+	  
+    
+    <title>Gestor de crises empresarial</title>
+</head>
+
+<body>
+     <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title" align="center">
+            <h2><strong><i class="fa fa-briefcase"></i> GESTOR DE CRISES</strong></h2>
+        </div>
+    </header>
+
+     <!-- Opções para adicionar um novo item -->
+<div class="content">
+    <section class="newItem" >
+            <div class="main-header" align="center">
+                <p><em>Registre aqui seu problema</em> </p>
+            </div>
+                       <!-- Tabela com o formulário de inserção -->
+                          <table width="100%" class="table table-sorting">
+                        <!--<table width="800" height="128" border="1" cellpadding="0" cellspacing="0" align="center">-->
+                            <tbody>
+                              <tr>
+                                <td>Data(dd/mm/aaaa)</td>
+                                <td ><input type="text" id="newData" class="form-control" size="5" placeholder="data"></td>
+                              </tr>
+                              <tr>
+                                <td>Título</td>
+                                <td><input type="text" id="newTitulo" class="form-control" size="50" placeholder="Descreva o título"></td>
+                              </tr>
+                              <tr>
+                                <td>Prazo(dias) </td>
+                                <td><input type="text" class="form-control" id="newPrazo" placeholder="dias" size="5"></td>
+                              </tr>
+                              <tr>
+                                <td>Descreva o seu problema</td>
+                                <td><textarea class="form-control" id="newProblema"  rows="5" cols="50" placeholder="Descreva aqui com detalhes seu problema"></textarea></td>
+                              </tr>
+                              <tr>
+                                <td colspan="2"><div align="center"><span onclick="newItem()" class="addBtn">Salvar</span></div></td>
+                              </tr>
+                            </tbody>
+                          </table>
+    </section>
+
+    <!-- Tabela com as crises na base de dados -->
+    <div class="widget widget-table">
+      <div class="widget-header">
+        <h3><i class="fa fa-bullhorn"></i> Relação de crises gravadas na base de dados</h3> 
+        <em></em>
+        <div class="btn-group widget-header-toolbar">
+          <a href="#" title="Focus" class="btn-borderless btn-focus"><i class="fa fa-eye"></i></a>
+          <a href="#" title="Expand/Collapse" class="btn-borderless btn-toggle-expand"><i class="fa fa-chevron-up"></i></a>
+          <a href="#" title="Remove" class="btn-borderless btn-remove"><i class="fa fa-times"></i></a>
+        </div> 
+      </div> 
+            
+      <section class="items">
+        <div class="widget-content"> 
+          <table id="myTable" class="table table-sorting table-hover table-bordered datatable">
+          <thead>
+            <tr>
+                <th>DATA</th>
+                <th>TÍTULO</th>
+                <th>PRAZO</th>
+                <th>DETALHES</th>
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px" align="right"></th>
+            </tr>
+          </thead>  
+        </table>
+      </div>
+      <section>
+</div>
+    <script src="scripts.js"></script>
+</body>
+</html>
